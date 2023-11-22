@@ -27,7 +27,7 @@ void sort_char_vector(vector<char>& vc);
 //------------------------------------------------------------------------------
 int main() {
 
-	int intArray[] = { 10, 35, 85, 93, 62, 77, 345, 43, 2, 10 };
+	int intArray[] = { 35, 10, 85, 93, 62, 77, 345, 43, 2, 10 };
 
 	// pass starting array address in memory and how many elements
 	sort_int_array(intArray, sizeof(intArray) / sizeof(intArray[0]));
@@ -76,11 +76,10 @@ void sort_int_array(int ia[], int num_elements) {
 
 	cout << '\n';
 
-	// Here, std::sort() needs to know at least 2 things:
-	// std::sort() needs to know at least 2 things:
+	// Here, std::sort() needs to know 2 things:
 	//		1) the starting memory address of the first element 
 	//		2) the ending address of the last element plus one
-	//		3) 
+
 	sort(ia, ia + num_elements);
 
 	cout << "integer array after sorting:  ";
