@@ -27,7 +27,7 @@ void sort_char_vector(vector<char>& vc);
 //------------------------------------------------------------------------------
 int main() {
 
-	int intArray[] = { 35, 10, 85, 93, 62, 77, 345, 43, 2, 10 };
+	int intArray[] = { 35, 10, 93, 85, 62, 77, 345, 43, 2, 10 };
 
 	// pass starting array address in memory and how many elements
 	sort_int_array(intArray, sizeof(intArray) / sizeof(intArray[0]));
@@ -36,7 +36,6 @@ int main() {
 	sort_char_vector(charVector);
 
 	cout << "Type any key to close this window...";
-
 	cin.get();
 }
 
