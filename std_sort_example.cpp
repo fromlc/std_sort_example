@@ -29,7 +29,9 @@ void sort_int_array(int ia[], int num_elements);
 // If the vector is passed by value, changes (like a sort) will not survive
 // the function call.
 
-void sort_char_vector(vector<char> vc);
+void sort_char_vector(vector<char>& vc);
+
+// Display functions output their caller's __FUNCTION_NAME__ 
 void display_array_elements(int ia[], int num_elements, const char*, const string&);
 void display_vector_elements(vector<char>& vc, const char*, const string&);
 
@@ -108,7 +110,7 @@ void sort_int_array(int ia[], int num_elements) {
 //------------------------------------------------------------------------------
 // sort passed vector of chars
 //------------------------------------------------------------------------------
-void sort_char_vector(vector<char> vc) {
+void sort_char_vector(vector<char>& vc) {
 
 	// We know the passed vector's size inside this function,
 	// and much more, because a vector carries its own information with it.
@@ -129,7 +131,7 @@ void sort_char_vector(vector<char> vc) {
 void display_array_elements(int ia[], int num_elements, 
 	const char* func_name, const string& debug_msg) {
 
-	cout << func_name << debug_msg << "\n\n";
+	cout << '\n' << func_name << debug_msg << '\n';
 
 	for (int i = 0; i < num_elements; i++)
 		cout << ia[i] << " ";
@@ -143,7 +145,7 @@ void display_array_elements(int ia[], int num_elements,
 void display_vector_elements(vector<char>& vc, 
 	const char* func_name, const string& debug_msg) {
 
-	cout << func_name << debug_msg << "\n\n";
+	cout << '\n' << func_name << debug_msg << '\n';
 
 	for (char ch : vc)
 		cout << ch;
